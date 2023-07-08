@@ -1,0 +1,67 @@
+############################### service ##############################
+service:
+  enable : true
+  subtitle : "Services"
+  title : "Our Service Area"
+  service_item:
+    - title : "Networking"
+      icon : "fa-object-ungroup"
+      icon_color : "primary" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do"
+
+    - title : "Social Activity"
+      icon : "fa-users"
+      icon_color : "yellow" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do"
+
+    - title : "Web Design"
+      icon : "fa-desktop"
+      icon_color : "purple" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do"
+
+    - title : "Cloud Service"
+      icon : "fa-cloud"
+      icon_color : "cyan" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do"
+      
+    - title : "Consulting"
+      icon : "fa-comments"
+      icon_color : "red" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do"
+      
+    - title : "SEO Optimization"
+      icon : "fa-search-plus"
+      icon_color : "green" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do"
+      
+    - title : "Usability Testing"
+      icon : "fa-line-chart"
+      icon_color : "orange" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do"
+      
+    - title : "UX Prototyping"
+      icon : "fa-wpexplorer"
+      icon_color : "blue" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do"
+
+
+############################### Features #####################################
+feature:
+  enable : true
+  subtitle : "fetures"
+  title : "exclusive features"
+  feature_item:
+    - title : "Exclusive Design"
+      icon : "fa-desktop"
+      icon_color : "primary" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore magna."
+      
+    - title : "Easy Customize"
+      icon : "fa-gears"
+      icon_color : "primary" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore magna."
+      
+    - title : "Extreme Security"
+      icon : "fa-shield"
+      icon_color : "primary" # available color : primary, yellow, purple, cyan, red, green, orange, blue.
+      content : "Lorem ipsum dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore magna."

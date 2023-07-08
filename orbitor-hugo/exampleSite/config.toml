@@ -1,0 +1,219 @@
+######################## default configuration ####################
+baseURL = "https://orbitor-hugo.netlify.com/"
+languageCode = "en-us"
+title = "Orbitor Hugo - Software Company Template"
+theme = "orbitor-hugo"
+summaryLength = "10"
+paginate = 4
+
+
+[outputs]
+  home = ["HTML", "AMP", "RSS", "JSON"]
+
+############################# Plugins ##############################
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "plugins/bootstrap/css/bootstrap.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/themify/css/themify-icons.css"
+  [[params.plugins.css]]
+  URL = "plugins/magnific-popup/dist/magnific-popup.css"
+  [[params.plugins.css]]
+  URL = "plugins/modal-video/modal-video.css"
+  [[params.plugins.css]]
+  URL = "plugins/animate-css/animate.css"
+  [[params.plugins.css]]
+  URL = "plugins/slick-carousel/slick/slick.css"
+  [[params.plugins.css]]
+  URL = "plugins/slick-carousel/slick/slick-theme.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "plugins/jQuery/jquery.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/bootstrap/js/popper.js"
+  [[params.plugins.js]]
+  URL = "plugins/bootstrap/js/bootstrap.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/magnific-popup/dist/jquery.magnific-popup.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/slick-carousel/slick/slick.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/counterup/jquery.waypoints.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/counterup/jquery.counterup.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/modal-video/modal-video.js"
+  [[params.plugins.js]]
+  URL = "plugins/search/fuse.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/search/mark.js"
+  [[params.plugins.js]]
+  URL = "plugins/search/search.js"
+  [[params.plugins.js]]
+  URL = "plugins/google-map/map.js"
+  [[params.plugins.js]]
+  URL = "https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"
+
+  
+############################## navigation ###############################
+[menu]
+    
+  [[menu.main]]
+  name = "About"
+  URL = "about"
+  weight = 2
+  
+  [[menu.main]]
+  name = "Portfolio"
+  URL = "portfolio"
+  weight = 3
+
+  [[menu.main]]
+  weight = 4
+  name = "Pages"
+  hasChildren = true
+
+    [[menu.main]]
+    parent = "Pages"
+    name = "Blog"
+    URL = "blog"
+
+    [[menu.main]]
+    parent = "Pages"
+    name = "Service"
+    URL = "service"
+
+    [[menu.main]]
+    parent = "Pages"
+    name = "Pricing"
+    URL = "pricing"
+    
+  [[menu.main]]
+  name = "Contact"
+  URL = "contact"
+  weight = 5
+
+  # footer menu 1
+  [[menu.footer1]]
+  name = "About"
+  URL = "about"
+  weight = 1
+  
+  [[menu.footer1]]
+  name = "Portfolio"
+  URL = "portfolio"
+  weight = 2
+  
+  [[menu.footer1]]
+  name = "Service"
+  URL = "service"
+  weight = 3
+  
+  [[menu.footer1]]
+  name = "Blog"
+  URL = "blog"
+  weight = 4
+  
+  [[menu.footer1]]
+  name = "Contact"
+  URL = "contact"
+  weight = 5
+  
+  # footer menu 2
+  [[menu.footer2]]
+  name = "About"
+  URL = "about"
+  weight = 1
+  
+  [[menu.footer2]]
+  name = "Portfolio"
+  URL = "portfolio"
+  weight = 2
+  
+  [[menu.footer2]]
+  name = "Service"
+  URL = "service"
+  weight = 3
+  
+  [[menu.footer2]]
+  name = "Blog"
+  URL = "blog"
+  weight = 4
+  
+  [[menu.footer2]]
+  name = "Contact"
+  URL = "contact"
+  weight = 5
+
+#################### default parameters ################################
+[params]
+logo = "images/logo.png"
+logoAlt = "images/logo-w.png"
+home = "Home"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# Cookie
+cookie = true
+expireDay = 2
+# google map
+gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
+mapLatitude = "51.5223477"
+mapLongitude = "-0.1622023"
+mapMarker = "images/marker.png"
+# Google Analitycs
+googleAnalitycsID = "Your ID"
+# copyright
+copyright = "&copy; Copyright Reserved to <span class=\"text-color\">Orbitor</span> by <a href=\"https://themefisher.com/\" target=\"_blank\">Themefisher"
+
+  # Preloader
+  [params.preloader]
+  enable = true
+
+  # Navigation button
+  [params.navBtn]
+  enable = true
+  label = "Get an estimate"
+  link = "contact"
+
+############################# Footer ##############################
+
+  # footer about
+  [params.footer.about]
+  title = "Orbitor"
+  content = "Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus."
+
+  # contact info
+  [params.contact]
+  mobile = "+23-345-67890"
+  email = "support@gmail.com"
+  location = "North Main Street,Brooklyn Australia"
+
+################################# Social icon #######################
+[[params.social]]
+icon = "ti-facebook"
+link = "#"
+
+[[params.social]]
+icon = "ti-twitter-alt"
+link = "#"
+
+[[params.social]]
+icon = "ti-github"
+link = "#"
+
+############################# post share links ######################
+[[params.postShare]]
+icon = "ti-facebook"
+link = "#"
+
+[[params.postShare]]
+icon = "ti-twitter-alt"
+link = "#"
+
+[[params.postShare]]
+icon = "ti-linkedin"
+link = "#"

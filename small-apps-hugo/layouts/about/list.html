@@ -1,0 +1,176 @@
+{{ define "main" }}
+
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ "<!-- Our Story -->" | safeHTML }}
+{{ if $data.about.our_story.enable }}
+{{ with $data.about.our_story }}
+<section class="section about p-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 align-self-center">
+        <div class="content">
+          <h2>{{ .title | safeHTML | markdownify }}</h2>
+          <p>{{ .content | safeHTML | markdownify }}</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-slider owl-carousel owl-theme">
+          {{ range .image_slider }}
+          <div class="item">
+            <img src="{{ .image_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .image | absURL }}'">
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of Our Story -->" | safeHTML }}
+
+
+{{ "<!-- Behind Story -->" | safeHTML }}
+{{ if $data.about.behind_story.enable }}
+{{ with $data.about.behind_story }}
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title mb-0">
+          <h2>{{ .title | safeHTML | markdownify }}</h2>
+          <p>{{ .content | safeHTML | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of Behind Story -->" | safeHTML }}
+
+
+{{ "<!-- about us -->" | safeHTML }}
+{{ if $data.about.about_us.enable }}
+{{ with $data.about.about_us }}
+<section class="section create-stories pt-0">
+  <div class="container">
+    <div class="row">
+      {{ range .about_item }}
+      <div class="col-lg-6">
+        <div class="block">
+          <img class="img-fluid" src="{{ .image_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .image | absURL }}'" alt="{{ .title }}">
+          <h3>{{ .title | safeHTML | markdownify }}</h3>
+          <p>{{ .content | safeHTML | markdownify }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of about us -->" | safeHTML }}
+
+
+{{ "<!-- Quotes Slider -->" | safeHTML }}
+{{ if $data.about.quote_slider.enable }}
+<section class="section quotes pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 m-auto text-center">
+        <div class="quote-slider owl-carousel owl-theme">
+          {{ range $data.about.quote_slider.slider_item }}
+          <div class="item">
+            <h2>{{ .quote }}</h2>
+            <cite>-{{ .quote_by }}</cite>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ "<!-- End of Quotes Slider -->" | safeHTML }}
+
+
+{{ "<!-- Client Slider -->" | safeHTML }}
+{{ if $data.about.clients_logo_slider.enable }}
+{{ with $data.about.clients_logo_slider }}
+<section class="section clients bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 m-auto text-center">
+        <h3>{{ .title }}</h3>
+        <div class="client-slider owl-carousel owl-theme">
+          {{ range .logos }}
+          <div class="item">
+            <img src="{{ . | absURL }}" alt="client-logo">
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of Client Slider -->" | safeHTML }}
+
+
+{{ "<!-- Investors -->" | safeHTML }}
+{{ if $data.about.investors.enable }}
+{{ with $data.about.investors }}
+<section class="section investors">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>{{ .title | safeHTML | markdownify }}</h2>
+          <p>{{ .content | safeHTML | markdownify }}</p>
+        </div>
+      </div>
+      {{ range .investor }}
+      <div class="col-lg-3 col-md-6">
+        <div class="block text-center">
+          <div class="image shadow hover-zoom">
+            <img src="{{ .image_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .image | absURL }}'" class="img-fluid" alt="{{ .name }}">
+          </div>
+          <h3>{{ .name | safeHTML | markdownify }}</h3>
+          <p>{{ .designation | safeHTML | markdownify }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of Investors -->" | safeHTML }}
+
+
+{{ "<!-- call to action -->" | safeHTML }}
+{{ if $data.about.call_to_action.enable }}
+{{ with $data.about.call_to_action }}
+<section class="section cta-hire bg-gary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>{{ .title | safeHTML | markdownify }}</h2>
+        <p>{{ .content | safeHTML | markdownify }}</p>
+        {{ if .button.enable }}
+        {{ with .button }}
+        <a href="{{ .link | absLangURL }}" class="btn btn-main">{{ .label }}</a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of call to action -->" | safeHTML }}
+
+{{ end }}

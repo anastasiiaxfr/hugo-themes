@@ -1,0 +1,176 @@
+######################## default configuration ####################
+baseURL = "https://examplesite.com"
+languageCode = "en-us"
+title = "Adrian Hugo | E-commerce template"
+theme = "adrian-hugo"
+summaryLength = "20"
+paginate = 6
+disqusShortname = "adrian" #get your shortname form : disqus.com
+
+############################ Output ###############################
+[outputs]
+  home = ["HTML", "AMP", "RSS", "JSON"]
+
+############################# Taxonomies ###########################
+[taxonomies]
+  category = "categories"
+  color = "colors"
+  size = "sizes"
+
+############################# Plugins ##############################
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "plugins/bootstrap/bootstrap.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/themify-icons/themify-icons.css"
+  [[params.plugins.css]]
+  URL = "plugins/slick/slick.css"
+  [[params.plugins.css]]
+  #URL = "plugins/slick/slick-theme.css"
+  [[params.plugins.css]]
+  URL = "https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "plugins/jQuery/jquery.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/bootstrap/bootstrap.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/SyoTimer/jquery.syotimer.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/slick/slick.min.js"
+  [[params.plugins.js]]
+  URL = "https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.js"
+  [[params.plugins.js]]
+  URL = "plugins/instafeed-js/instafeed.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/search/fuse.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/search/mark.js"
+  [[params.plugins.js]]
+  URL = "plugins/search/search.js"
+  [[params.plugins.js]]
+  URL = "plugins/google-map/gmap.js"
+
+  
+############################## navigation ###############################
+[menu]
+    
+  [[menu.main]]
+  name = "Shop"
+  URL = "shop"
+  weight = 1
+    
+  [[menu.main]]
+  name = "About"
+  URL = "about"
+  weight = 2
+  
+  [[menu.main]]
+  name = "Faq"
+  URL = "faq"
+  weight = 3
+    
+  [[menu.main]]
+  name = "Contact"
+  URL = "contact"
+  weight = 4
+    
+  # footer menu
+  [[menu.footer]]
+  name = "Shop"
+  URL = "shop"
+  weight = 1
+
+  [[menu.footer]]
+  name = "About"
+  URL = "about"
+  weight = 2
+  
+  [[menu.footer]]
+  name = "Faq"
+  URL = "faq"
+  weight = 3
+    
+  [[menu.footer]]
+  name = "Contact"
+  URL = "contact"
+  weight = 4
+
+
+#################### default parameters ################################
+[params]
+logo = "images/logo.png"
+home = "Home"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# snipcart public api key
+snipcartAPI = "ZDgxY2ZiM2EtMWRmMi00M2ZkLWI1MDAtNzA2MDc0Y2Q1MzJlNjM3MTAzNDIwOTQ1NDA4NjM4"
+currency = "$"
+# google map
+gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
+mapLatitude = "51.5223477"
+mapLongitude = "-0.1622023"
+mapMarker = "images/marker.png"
+# Google Analitycs
+googleAnalitycsID = "Your ID"
+# Contact Information
+mobile = "0124857985320"
+email = "demo@email.com"
+location = "Dhaka, Bangladedsh"
+# contact form action
+contactFormAction = "#" # contact form works with : https://formspree.io
+# copyright
+copyright = "Copyright &copy; 2019 [Themefisher](https://themefisher.com) All Rights Reserved"
+
+  # Preloader
+  [params.preloader]
+  enable = true
+  preloader = "" # use .png , .svg or .gif format
+
+  # search
+  [params.search]
+  enable = true
+
+  
+############################# Product Share ########################
+[[params.share]]
+title = "facebook"
+icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
+link = "#"
+
+[[params.share]]
+title = "twitter"
+icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
+link = "#"
+
+[[params.share]]
+title = "instagram"
+icon = "ti-instagram" # themify icon : https://themify.me/themify-icons
+link = "#"
+
+[[params.share]]
+title = "linkedin"
+icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
+link = "#"
+
+
+############################### Footer #############################
+[params.footer]
+content = "Iste dolores iure quis excepturi, deserunt praesentium."
+
+# opening hours
+[[params.footer.openingHour]]
+day = "Monday-Friday"
+time = "8.00-20.00"
+
+[[params.footer.openingHour]]
+day = "Saturday"
+time = "10.00-20.00"
+
+[[params.footer.openingHour]]
+day = "Sunday"
+time = "12.00-20.00"

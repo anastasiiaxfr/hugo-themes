@@ -1,0 +1,241 @@
+{{ define "main" }}
+
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ "<!-- Hero Section -->" | safeHTML }}
+{{ if $data.homepage.banner.enable }}
+{{ with $data.homepage.banner }}
+<section class="section gradient-banner">
+	{{ if .background_shapes }}
+	<div class="shapes-container">
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
+		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
+		<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
+	</div>
+	{{ end }}
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
+				<h1 class="text-white font-weight-bold mb-4">{{ .title | safeHTML | markdownify }}</h1>
+				<p class="text-white mb-5">{{ .content | safeHTML | markdownify }}</p>
+				{{ with .button }}
+				<a href="{{ .link | absLangURL }}" class="btn font-weight-bold btn-main-md">{{ .label }}</a>
+				{{ end }}
+			</div>
+			<div class="col-md-6 text-center order-1 order-md-2">
+				<img src="{{ .image_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .image | absURL }}'" class="img-fluid" alt="banner-image">
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of Hero Section -->" | safeHTML }}
+
+{{"<!-- banner-feature -->" | safeHTML}}
+{{ if $data.homepage.banner_feature.enable }}
+{{ with $data.homepage.banner_feature }}
+<section class="section pt-0 position-relative pull-top">
+	<div class="container">
+		<div class="rounded shadow p-5 bg-white">
+			<div class="row justify-content-center">
+				{{ range .feature_item }}
+				<div class="col-md-4 mb-4 text-center">
+					<i class="{{ .icon }} text-primary h1"></i>
+					<h3 class="mt-4 text-capitalize h5 ">{{.title }}</h3>
+					<p class="regular text-muted">{{.content | markdownify }}</p>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+{{"<!-- /banner-feature -->" | safeHTML}}
+
+{{ "<!-- Feature -->" | safeHTML }}
+{{ if $data.homepage.feature.enable }}
+{{ range $i,$p:= $data.homepage.feature.feature_item }}
+<section class="feature section pt-0 hide-overflow">
+	<div class="container">
+		<div class="row justify-content-between align-items-center">
+			<div class="col-lg-6 {{if not (modBool $i 2)}}order-lg-2{{end}}">
+				<div class="image-content" data-aos="fade-{{if not (modBool $i 2)}}left{{else}}right{{end}}">
+					<img class="img-fluid" src="{{ .image_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .image | absURL }}'" alt="feature image">
+				</div>
+			</div>
+			<div class="col-lg-6 {{if not (modBool $i 2)}}order-lg-1{{end}}">
+				<div class="feature-content">
+					<h2>{{ .title }}</h2>
+					<p class="desc">{{ .content }}</p>
+				</div>
+				{{ if .quote.enable }}
+				{{ with .quote }}
+				<div class="testimonial">
+					<p>"{{ .comment }}"</p>
+					<ul class="list-inline meta">
+						<li class="list-inline-item">
+							<img src="{{ .avater | absURL }}" alt="{{ .name }}">
+						</li>
+						<li class="list-inline-item">{{ .name }}</li>
+					</ul>
+				</div>
+				{{ end }}
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- /Feature -->" | safeHTML }}
+
+
+{{"<!-- Services -->" | safeHTML }}
+{{ if $data.homepage.service.enable }}
+{{ with $data.homepage.service }}
+<section class="service section bg-gray">
+	<div class="container-fluid p-0">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<h2>{{ .title | safeHTML | markdownify }}</h2>
+					<p>{{ .subtitle | safeHTML | markdownify }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="row no-gutters">
+			<div class="col-lg-6 align-self-center">
+				<div class="service-thumb left" data-aos="fade-right">
+					<img class="img-fluid" src="{{ .image_webp | absURL }}"
+						onerror="this.onerror=null;this.src='{{ .image | absURL }}'" alt="service image">
+				</div>
+			</div>
+			<div class="col-lg-5 mr-auto align-self-center">
+				<div class="service-box">
+					<div class="row align-items-center">
+						{{ range .service_item }}
+						<div class="col-md-6 col-xs-12">
+							<div class="service-item">
+								<i class="{{ .icon }}"></i>
+								<h3>{{ .name }}</h3>
+								<p>{{ .content | safeHTML | markdownify }}</p>
+							</div>
+						</div>
+						{{ end }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+{{"<!-- End of Services -->" | safeHTML }}
+
+
+{{ "<!-- Video Promo -->" | safeHTML }}
+{{ if $data.homepage.promo_video.enable }}
+{{ with $data.homepage.promo_video }}
+<section class="video-promo section bg-1" style="background-image: url('{{.bg_image | absURL}}')">
+	<!-- this image is for trigger this section fallback background image -->
+	<img style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .bg_image | absURL }})'" src="{{ .bg_image_webp | absURL }}" />
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="content-block">
+					<h2>{{ .title | safeHTML | markdownify }}</h2>
+					<p>{{ .content | safeHTML | markdownify }}</p>
+					<a class="video-modal" data-toggle="modal" data-src="{{ .video_embed_url | safeURL }}" data-target="#videoModal"><i class="tf-ion-play video"></i></a>
+
+					<!-- Modal -->
+					<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+							<div class="modal-content border-0 rounded-0">
+								<iframe src="" id="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="min-height: 450px; width: auto;"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of Video Promo -->" | safeHTML }}
+
+
+{{ "<!-- Testimonial -->" | safeHTML }}
+{{ if $data.homepage.testimonial.enable }}
+{{ with $data.homepage.testimonial }}
+<section class="section testimonial">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="testimonial-slider owl-carousel owl-theme">
+					{{ range .testimonial_item }}
+					{{ "<!-- Testimonial 01 -->" | safeHTML }}
+					<div class="item">
+						<div class="block shadow">
+							<p>{{ .content }}</p>
+							<div class="image">
+								<img src="{{ .image | absURL }}" alt="{{ .name }}">
+							</div>
+							<cite>{{ .name }}</cite>
+						</div>
+					</div>
+					{{ end }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of Testimonial -->" | safeHTML }}
+
+
+{{ "<!-- download -->" | safeHTML }}
+{{ if $data.homepage.download.enable }}
+{{ with $data.homepage.download }}
+<section class="call-to-action-app section bg-blue">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2>{{ .title | safeHTML | markdownify }}</h2>
+				<p>{{ .subtitle | safeHTML | markdownify }}</p>
+				<ul class="list-inline">
+					{{ range .download_buttons }}
+					<li class="list-inline-item">
+						<a href="{{ .link | safeURL }}" class="btn btn-rounded-icon">
+							<i class="{{ .icon }}"></i>
+							{{ .label }}
+						</a>
+					</li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+{{ "<!-- End of download -->" | safeHTML }}
+
+{{ end }}

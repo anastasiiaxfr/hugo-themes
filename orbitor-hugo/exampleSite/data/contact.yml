@@ -1,0 +1,70 @@
+################################### contact form #########################
+contact:
+  subtitle : "Send a message"
+  title : "Contact Form"
+  # form submit email place on "mail.php" file
+  selectOption:
+    - option : "Software Design"
+    - option : "Development cycle"
+    - option : "Software Development"
+    - option : "Maintenance"
+    - option : "Process Query"
+    - option : "Cost and Duration"
+    - option : "Modal Delivery"
+
+############################# map ##################################
+map:
+  enable : true
+  # map data comes from "config.toml" file
+
+############################ branch ###############################
+branch:
+  enable : true
+  branchOffice:
+    # branch office loop
+    - title : "Corporate Office"
+      info:
+        # branch information loop
+        - label : "North Main Street,Brooklyn Australia"
+          icon : "ti-location-pin" # here we use themify icon pack : https://themify.me/themify-icons
+          
+        # branch information loop
+        - label : "Email: contact@mail.com"
+          icon : "ti-email" # here we use themify icon pack : https://themify.me/themify-icons
+          
+        # branch information loop
+        - label : "Phone:+88 01672 506 744"
+          icon : "ti-mobile" # here we use themify icon pack : https://themify.me/themify-icons
+
+          
+    # branch office loop
+    - title : "USA Location"
+      info:
+        # branch information loop
+        - label : "North Main Street,Brooklyn Australia"
+          icon : "ti-location-pin" # here we use themify icon pack : https://themify.me/themify-icons
+          
+        # branch information loop
+        - label : "Email: contact@mail.com"
+          icon : "ti-email" # here we use themify icon pack : https://themify.me/themify-icons
+          
+        # branch information loop
+        - label : "Phone:+88 01672 506 744"
+          icon : "ti-mobile" # here we use themify icon pack : https://themify.me/themify-icons
+
+          
+    # branch office loop
+    - title : "Europe"
+      info:
+        # branch information loop
+        - label : "North Main Street,Brooklyn Australia"
+          icon : "ti-location-pin" # here we use themify icon pack : https://themify.me/themify-icons
+          
+        # branch information loop
+        - label : "Email: contact@mail.com"
+          icon : "ti-email" # here we use themify icon pack : https://themify.me/themify-icons
+          
+        # branch information loop
+        - label : "Phone:+88 01672 506 744"
+          icon : "ti-mobile" # here we use themify icon pack : https://themify.me/themify-icons
+          

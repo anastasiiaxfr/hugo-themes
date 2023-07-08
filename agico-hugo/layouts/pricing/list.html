@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{"<!-- pricing -->"| safeHTML}}
+{{ if $data.pricing.pricing.enable }}
+<section class="section section-lg-bottom">
+  <div class="container">
+    <div class="row">
+      {{ with $data.pricing.pricing }}
+      <div class="col-lg-12 text-center">
+        <p class="subtitle" data-aos="fade-up">{{ .subtitle }}</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">{{ .title }}</h2>
+      </div>
+      {{ end }}
+      {{ partial "pricing-table.html" . }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{"<!-- pricing -->"| safeHTML}}
+
+{{ end }}

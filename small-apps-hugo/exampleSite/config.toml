@@ -1,0 +1,166 @@
+############################# Default configuration ########################
+baseURL = "http://example.org/"
+title = "Small Apps | App Landing Template"
+theme = "small-apps-hugo"
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "10"
+# disable language
+disableLanguages = [] # desable language from here
+
+################################### Plugins #################################
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themefisher-font/themefisher-font.min.css"
+[[params.plugins.css]]
+link = "plugins/owl-carousel/owl.carousel.min.css"
+[[params.plugins.css]]
+link = "plugins/aos/aos.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/owl-carousel/owl.carousel.min.js"
+[[params.plugins.js]]
+link = "plugins/aos/aos.js"
+[[params.plugins.js]]
+link = "plugins/google-map/gmap.js"
+
+
+############################ navigation #################################
+# main menu
+[[menu.main]]
+name = "About"
+URL = "about"
+weight = 1
+
+[[menu.main]]
+name = "team"
+URL = "team"
+weight = 2
+
+[[menu.main]]
+name = "Blog"
+URL = "blog"
+weight = 3
+
+[[menu.main]]
+name = "career"
+URL = "career"
+weight = 4
+
+[[menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 5
+
+# dropdown menu
+[[menu.main]]
+name = "Pages"
+weight = 6
+hasChildren = true
+
+  [[menu.main]]
+  parent = "Pages"
+  name = "privacy"
+  URL = "privacy"
+  weight = 1
+
+  [[menu.main]]
+  parent = "Pages"
+  name = "FAQ"
+  URL = "faq"
+  weight = 2
+
+
+# footer menu
+[[menu.footer]]
+name = "About"
+URL = "about"
+
+[[menu.footer]]
+name = "Contact"
+URL = "contact"
+
+[[menu.footer]]
+name = "Privacy"
+URL = "privacy"
+
+[[menu.footer]]
+name = "Blog"
+URL = "blog"
+
+[[menu.footer]]
+name = "FAQ"
+URL = "faq"
+
+
+########################### Default parameters ###########################
+[params]
+# main logo
+logo = "images/logo.png"
+# footer logo
+logo_light = "images/logo-alt.png"
+home = "Home"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# contact info
+address = "9567 Turner Trace Apt. <br/> 466 North Willie, BC C3G8A4"
+mobile = "+211234565523"
+email = "info@smallapps.com"
+# contact form action
+contact_form_action = "#" # contact form works with https://formspree.io
+# Google Analitycs
+google_analitycs_id = "" # Your ID
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use jpg,png,svg or gif format
+
+# google map
+[params.map]
+enable = true
+gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
+map_latitude = "51.5223477"
+map_longitude = "-0.1622023"
+map_marker = "images/marker.png"
+
+
+########################### social icon ############################
+[[params.social]]
+icon = "tf-ion-social-facebook"
+URL = "https://facebook.com/themefisher"
+
+[[params.social]]
+icon = "tf-ion-social-twitter"
+URL = "https://twitter.com/themefisher"
+
+[[params.social]]
+icon = "tf-ion-social-instagram"
+URL = "https://instagram.com/themefisher"
+
+
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+home = "Home"
+
+
+################################### French language #####################################
+[Languages.fr]
+languageName = "Fr"
+languageCode = "fr-fr"
+contentDir = "content/french"
+weight = 2
+home = "Accueil"

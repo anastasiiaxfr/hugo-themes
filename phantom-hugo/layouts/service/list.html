@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<section class="site-wrapper">
+  <div class="pt-table">
+    <div class="pt-tablecell page-services relative">
+      <a href="{{ .Site.BaseURL }}" class="page-close"><i class="tf-ion-close"></i></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-lg-offset-1 col-lg-10">
+            {{ partial "page-title.html" . }}
+            <div class="hexagon-menu services clear">
+              {{ .Content }}
+            </div>
+          </div> <!-- /.col-xs-12 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+      {{ partial "page-nav.html" . }}
+      <!-- /.container -->
+    </div> <!-- /.pt-tablecell -->
+  </div> <!-- /.pt-table -->
+</section> <!-- /.site-wrapper -->
+
+
+{{ end }}

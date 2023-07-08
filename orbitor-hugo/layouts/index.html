@@ -1,0 +1,176 @@
+{{ define "main" }}
+
+<!-- Slider -->
+{{ if .Site.Data.homepage.banner.enable }}
+{{ with .Site.Data.homepage.banner }}
+<section class="banner d-flex align-items-center" style="background-image: url('{{ .bgImage | absURL}}');">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-12 col-xl-8">
+        <div class="block">
+          <span class="text-uppercase text-sm letter-spacing">{{ .subtitle | markdownify }}</span>
+          <h1 class="mb-3 mt-3">{{ .title | markdownify }}</h1>
+          <p class="mb-5">{{ .content | markdownify }}</p>
+          {{ if .button.enable }}
+          {{ with .button }}
+          <a href="{{ .link | absURL }}" class="btn btn-main">{{ .label }} <i class="ti-angle-right ml-2"></i></a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /Slider -->
+
+<!-- banner feature -->
+{{ if .Site.Data.homepage.bannerFeature.enable }}
+{{ with .Site.Data.homepage.bannerFeature }}
+<section class="section about">
+  <div class="container">
+    <div class="row">
+      {{ range .featureItem }}
+      <div class="col-lg-4 col-md-6 ">
+        <div class="about-item mb-5 mb-lg-5">
+          <div class="icon">
+            <i class="{{ .icon }}"></i>
+          </div>
+          <div class="content">
+            <h4 class="mt-3 mb-3">{{ .title | markdownify }}</h4>
+            <p class="mb-4">{{ .content | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /banner feature -->
+
+<!-- feature -->
+{{ if .Site.Data.homepage.feature.enable }}
+{{ with .Site.Data.homepage.feature }}
+<section class="section process">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5">
+        <div class="process-block pl-4">
+          <span class="text-uppercase text-sm letter-spacing">{{ .subtitle | markdownify }}</span>
+          <h2 class="mb-4 mt-3">{{ .title | markdownify }}</h2>
+          <p class="mb-4">{{ .content | markdownify }}</p>
+        </div>
+      </div>
+
+      <div class="col-lg-7 col-xs-12 col-md-12">
+        <div class="row">
+          {{ range .featureItem }}
+          <div class="col-sm-6 mb-4">
+            <div class="icon-block text-center">
+              <i class="{{ .icon }}"></i>
+              <h5>{{ .title | markdownify }}</h5>
+              <p>{{ .content | markdownify }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /feature -->
+
+<!-- call to action -->
+{{ if .Site.Data.homepage.cta.enable }}
+{{ with .Site.Data.homepage.cta }}
+<section class="section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="cta-content bg-white p-5 rounded">
+          <h3 class="mb-4">{{ .title | markdownify }}</h3>
+          <p class="mb-30">{{ .content | markdownify }}</p>
+          {{ if .button.enable }}
+          {{ with .button }}
+          <a href="{{ .link | absURL }}" class="btn btn-main">{{ .label }}<i class="ti-angle-right ml-2"></i></a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /call to action -->
+
+<!-- section portfolio start -->
+{{ if .Site.Data.homepage.project.enable }}
+<section class="section portfolio pb-0">
+  {{ with .Site.Data.homepage.project }}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="heading">
+          <h2 class="mb-4">{{ .title | markdownify }}</h2>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  <div class="container-fluid">
+    <div class="row portfolio-gallery">
+      {{ range (where .Site.RegularPages "Type" "portfolio" )}}
+      <div class="col-lg-4 col-md-6">
+        <div class="portflio-item position-relative mb-4">
+          <a href="{{.Permalink}}">
+            <img src="{{ .Params.Image | absURL }}" alt="{{ .Title }}" class="img-fluid w-100">
+            <div class="overlay-item"><i class="ti-link"></i></div>
+            <div class="portfolio-item-content">
+              <h3 class="mb-0 text-white">{{ .Title | markdownify }}</h3>
+              <p class="text-white-50">{{ .Params.Category }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- section portfolio END -->
+
+<!-- section Counter Start -->
+{{ if .Site.Data.homepage.counter.enable }}
+{{ with .Site.Data.homepage.counter }}
+<section class="section counter">
+  <div class="container">
+    <div class="row">
+      {{ range .counterItem }}
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="counter-item text-center mb-5 mb-lg-0">
+          <h2 class="mb-0"><span class="counter-stat font-weight-bold">{{ .count }}</span> +</h2>
+          <p>{{ .title | markdownify }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- section Counter End  -->
+
+<!-- testimonial -->
+{{ if .Site.Data.homepage.testimonial.enable }}
+{{ partial "testimonial.html" . }}
+{{ end }}
+<!-- /testimonial -->
+
+{{ end }}

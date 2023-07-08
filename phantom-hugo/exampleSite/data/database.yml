@@ -1,0 +1,209 @@
+#################################################
+####################  resume  ###################
+#################################################
+resume:
+  # duplicate this for a new resume block
+  - title : "Education"
+    resumeItem:
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : "Claritas est etiam processus dynamicus, qui <br> sequitur mutationem consuetudium lectorum."
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+
+
+  
+  # duplicate this for a new resume block
+  - title : "Experiences"
+    resumeItem:
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : "Claritas est etiam processus dynamicus, qui <br> sequitur mutationem consuetudium lectorum."
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+        
+      # duplicate it for a new item
+      - icon : "tf-documents5"
+        title : "Merin Land College"
+        duration : "2012 - 2014"
+        description : ""
+
+
+#################################################
+#####################  works  ###################
+#################################################
+
+works:
+  # filter list
+  # dont use space in filter type
+  filterList:
+    - filterType : "Photoshop"
+    - filterType : "Illustrator"
+    - filterType : "Indesign"
+    - filterType : "Artworks"
+
+  # work items
+  workList:
+    # duplicate this item for another item
+    - projectName : "Project Name"
+      image : "img/works/1.jpg"
+      description : "Illustration, Digital Art"
+      filterType : "Photoshop Illustrator"
+      
+    # duplicate this item for another item
+    - projectName : "Project Name"
+      image : "img/works/2.jpg"
+      description : "Illustration, Digital Art"
+      filterType : "Illustrator"
+      
+    # duplicate this item for another item
+    - projectName : "Project Name"
+      image : "img/works/3.jpg"
+      description : "Illustration, Digital Art"
+      filterType : "Indesign Photoshop"
+      
+    # duplicate this item for another item
+    - projectName : "Project Name"
+      image : "img/works/4.jpg"
+      description : "Illustration, Digital Art"
+      filterType : "Artworks Illustrator"
+      
+    # duplicate this item for another item
+    - projectName : "Project Name"
+      image : "img/works/5.jpg"
+      description : "Illustration, Digital Art"
+      filterType : "Photoshop"
+
+
+#################################################
+##################  testimonial  ################
+#################################################
+
+testimonial:
+  # duplicate this item for create a new one
+  - name : "Adam Drigan"
+    designation : "CEO, Ultra Solution"
+    image : "img/tm.jpg"
+    content : "Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima."
+    
+  # duplicate this item for create a new one
+  - name : "Adam Drigan"
+    designation : "CEO, Ultra Solution"
+    image : "img/tm-2.jpg"
+    content : "Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima."
+    
+  # duplicate this item for create a new one
+  - name : "Adam Drigan"
+    designation : "CEO, Ultra Solution"
+    image : "img/tm.jpg"
+    content : "Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima."
+    
+  # duplicate this item for create a new one
+  - name : "Adam Drigan"
+    designation : "CEO, Ultra Solution"
+    image : "img/tm-2.jpg"
+    content : "Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima."
+    
+  # duplicate this item for create a new one
+  - name : "Adam Drigan"
+    designation : "CEO, Ultra Solution"
+    image : "img/tm.jpg"
+    content : "Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima."
+    
+  # duplicate this item for create a new one
+  - name : "Adam Drigan"
+    designation : "CEO, Ultra Solution"
+    image : "img/tm-2.jpg"
+    content : "Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima."
+
+
+#################################################
+###################  contact  ###################
+#################################################
+
+contact:
+  formAction : "#"
+  # contact information 
+  contactItem:
+    - name : "Email"
+      show : "my_name@gmail.com"
+      action : "mailto:my_name@gmail.com"
+      icon : "tf-envelope2"
+      
+    - name : "Phone"
+      show : "+000 1111 2222"
+      action : "tel:+000-1111-2222"
+      icon : "tf-phone2"
+      
+    - name : "Skype"
+      show : "my_name"
+      action : "skype:my_name"
+      icon : "tf-mobile"
+
+  # social icon
+  socialIcon:
+    - icon : "tf-ion-social-facebook"
+      URL : "#"
+      
+    - icon : "tf-ion-social-twitter"
+      URL : "#"
+      
+    - icon : "tf-ion-social-google"
+      URL : "#"
+      
+    - icon : "tf-ion-social-dribbble"
+      URL : "#"

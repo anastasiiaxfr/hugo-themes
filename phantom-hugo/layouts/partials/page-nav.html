@@ -1,0 +1,52 @@
+{{- $currentNode := . -}}
+<nav class="page-nav clear">
+  <div class="container">
+    <div class="flex flex-middle space-between">
+      {{- template "pagination" dict "menu" .Site.Home "currentnode" $currentNode "menu_exclusion" .Site.Params.menu_exclusion -}}
+      {{- with ($.Scratch.Get "prevPage") -}}
+      <span class="prev-page"><a href="{{ .URL }}" title="{{ .Title }}" class="link">&larr; Prev Page</a></span>
+      {{ end -}}
+      <span class="copyright hidden-xs">Copyright &copy; <script>
+        var CurrentYear = new Date().getFullYear()
+        document.write(CurrentYear)
+      </script> {{ .Site.Params.copyright }}</span>
+      {{- with ($.Scratch.Get "nextPage") -}}
+      <span class="next-page"><a href="{{ .URL }}" title="{{ .Title }}" class="link">Next Page &rarr;</a></span>
+      {{- end }}
+    </div>
+  </div>
+</nav>
+
+{{- define "pagination" -}}
+{{- $currentNode := .currentnode -}}
+{{- $menu_exclusion := .menu_exclusion -}}
+
+{{- if hasPrefix $currentNode.URL .menu.URL -}}
+  {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
+  {{- if .menu.IsHome -}}
+    {{- $currentNode.Scratch.Set "prevPage" "" -}}
+  {{- else -}}
+    {{- $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") -}}
+  {{- end -}}
+{{- else -}}
+  {{- if eq ($currentNode.Scratch.Get "NextPageOK") "OK" -}}
+    {{- $currentNode.Scratch.Set "NextPageOK" nil -}}
+    {{ if in $menu_exclusion .menu.Section }}
+    {{- else -}}
+      {{- $currentNode.Scratch.Set "nextPage" .menu -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $currentNode.Scratch.Set "prevPageTmp" .menu -}}
+{{- $currentNode.Scratch.Set "pages" .menu.Pages -}}
+{{- if .menu.IsHome -}}
+  {{- $currentNode.Scratch.Set "pages" .menu.Sections -}}
+{{- else if .menu.Sections -}}
+  {{- $currentNode.Scratch.Set "pages" (.menu.Pages | union .menu.Sections) -}}
+{{- end -}}
+{{- $pages := ($currentNode.Scratch.Get "pages") -}}
+{{- range $pages.ByWeight -}}
+  {{- template "pagination" dict "menu" . "currentnode" $currentNode "menu_exclusion" $menu_exclusion -}}
+{{- end -}}
+{{- end -}}

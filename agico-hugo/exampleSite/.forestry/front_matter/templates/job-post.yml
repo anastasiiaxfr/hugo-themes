@@ -1,0 +1,41 @@
+---
+label: Job Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: watermark
+  label: watermark
+  description: Page header watermark
+  default: Career
+- type: file
+  name: bg_image
+  label: bg_image
+- type: textarea
+  name: description
+  label: description
+- type: file
+  name: image
+  label: image
+  description: Company logo
+- type: text
+  name: location
+  label: location
+  description: office location
+- type: text
+  name: job_type
+  label: job_type
+  description: 'Ex: Full time'
+- type: text
+  name: job_category
+  label: job_category
+  description: 'Ex: Web Developer'
+- type: text
+  name: apply_link
+  label: apply_link
+  description: Application submit link

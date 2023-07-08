@@ -1,0 +1,11 @@
+---
+label: New Page
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+  description: meta description

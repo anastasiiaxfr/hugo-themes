@@ -1,0 +1,106 @@
+team:
+  enable : true
+  subtitle : "Team"
+  title : "Expert Person"
+  team_member:
+    # team member
+    - name : "Justine Marshall"
+      image : "images/team/team-member-1.jpg"
+      designation : "Designer"
+      social:
+        - icon : "fa-facebook"
+          link : "#"
+
+        - icon : "fa-twitter"
+          link : "#"
+
+        - icon : "fa-linkedin"
+          link : "#"
+
+        - icon : "fa-pinterest-p"
+          link : "#"
+          
+    # team member
+    - name : "Liam Hughes"
+      image : "images/team/team-member-2.jpg"
+      designation : "Developer"
+      social:
+        - icon : "fa-facebook"
+          link : "#"
+
+        - icon : "fa-twitter"
+          link : "#"
+
+        - icon : "fa-linkedin"
+          link : "#"
+
+        - icon : "fa-pinterest-p"
+          link : "#"
+          
+    # team member
+    - name : "Neil Roberts"
+      image : "images/team/team-member-3.jpg"
+      designation : "Marketer"
+      social:
+        - icon : "fa-facebook"
+          link : "#"
+
+        - icon : "fa-twitter"
+          link : "#"
+
+        - icon : "fa-linkedin"
+          link : "#"
+
+        - icon : "fa-pinterest-p"
+          link : "#"
+          
+    # team member
+    - name : "Justine Marshall"
+      image : "images/team/team-member-4.jpg"
+      designation : "Designer"
+      social:
+        - icon : "fa-facebook"
+          link : "#"
+
+        - icon : "fa-twitter"
+          link : "#"
+
+        - icon : "fa-linkedin"
+          link : "#"
+
+        - icon : "fa-pinterest-p"
+          link : "#"
+          
+    # team member
+    - name : "Liam Hughes"
+      image : "images/team/team-member-5.jpg"
+      designation : "Developer"
+      social:
+        - icon : "fa-facebook"
+          link : "#"
+
+        - icon : "fa-twitter"
+          link : "#"
+
+        - icon : "fa-linkedin"
+          link : "#"
+
+        - icon : "fa-pinterest-p"
+          link : "#"
+          
+    # team member
+    - name : "Neil Roberts"
+      image : "images/team/team-member-6.jpg"
+      designation : "Marketer"
+      social:
+        - icon : "fa-facebook"
+          link : "#"
+
+        - icon : "fa-twitter"
+          link : "#"
+
+        - icon : "fa-linkedin"
+          link : "#"
+
+        - icon : "fa-pinterest-p"
+          link : "#"

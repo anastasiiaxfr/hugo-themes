@@ -1,0 +1,88 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Phantom | Personal Resume Template"
+theme = "phantom-hugo"
+
+# Plugins
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "css/bootstrap.min.css"
+  [[params.plugins.css]]
+  URL = "css/themefisher-fonts.min.css"
+  [[params.plugins.css]]
+  URL = "css/owl.carousel.min.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "js/vendor/jquery-2.2.4.min.js"
+  [[params.plugins.js]]
+  URL = "js/vendor/bootstrap.min.js"
+  [[params.plugins.js]]
+  URL = "js/isotope.pkgd.min.js"
+  [[params.plugins.js]]
+  URL = "js/jquery.nicescroll.min.js"
+  [[params.plugins.js]]
+  URL = "js/owl.carousel.min.js"
+  [[params.plugins.js]]
+  URL = "js/jquery-validation.min.js"
+  [[params.plugins.js]]
+  URL = "js/form.min.js"
+  [[params.plugins.js]]
+  URL = "js/jquery.easing.min.js"
+  
+  
+[params]
+# dark mode
+dark = false
+logo = "img/phantom.png"
+shortDescription = "A product designer from England, who focuses on interactive design & A freelance designer focusing on typography & clean interfaces. Also works in Google."
+bgImage = "img/banner.jpg"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# Google Analitycs
+googleAnalitycsID = "Your ID"
+# copyright text
+copyright = "Phantom, All Rights Reserved."
+
+  # Preloader
+  [params.preloader]
+  enable = true
+
+  # Menu
+  [[params.menu]]
+  title = "Welcome"
+  icon = "tf-dial"
+  URL = "/welcome"
+  
+  [[params.menu]]
+  title = "About"
+  icon = "tf-profile-male"
+  URL = "/about"
+  
+  [[params.menu]]
+  title = "Services"
+  icon = "tf-tools-2"
+  URL = "/service"
+  
+  [[params.menu]]
+  title = "Resume"
+  icon = "tf-tools"
+  URL = "/resume"
+  
+  [[params.menu]]
+  title = "Works"
+  icon = "tf-briefcase2"
+  URL = "/works"
+  
+  [[params.menu]]
+  title = "Testimonials"
+  icon = "tf-chat"
+  URL = "/testimonial"
+  
+  [[params.menu]]
+  title = "Contact"
+  icon = "tf-envelope2"
+  URL = "/contact"

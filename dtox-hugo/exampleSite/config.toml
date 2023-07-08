@@ -1,0 +1,121 @@
+baseURL = "https://examplesite.com/"
+languageCode = "en-us"
+title = "Dtox Hugo Template"
+theme = "dtox-hugo"
+
+# Plugins
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "plugins/bootstrap/bootstrap.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/slick/slick.css"
+  [[params.plugins.css]]
+  URL = "plugins/themify-icons/themify-icons.css"
+  [[params.plugins.css]]
+  URL = "plugins/Venobox/venobox.css"
+  [[params.plugins.css]]
+  URL = "plugins/aos/aos.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "plugins/jQuery/jquery.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/bootstrap/bootstrap.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/slick/slick.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/aos/aos.js"
+  [[params.plugins.js]]
+  URL = "plugins/Venobox/venobox.min.js"
+
+
+# Menu
+[menu]
+  [[menu.main]]
+  name = "Feature"
+  URL = "#feature"
+  weight = 2
+
+  [[menu.main]]
+  name = "About"
+  URL = "about"
+  weight = 3
+  
+  [[menu.main]]
+  name = "Service"
+  URL = "service"
+  weight = 4
+
+  [[menu.main]]
+  name = "Team"
+  URL = "#team"
+  weight = 5
+  
+  [[menu.main]]
+  name = "Pricing"
+  URL = "#pricing"
+  weight = 6
+
+  [[menu.main]]
+  name = "Contact"
+  URL = "contact"
+  weight = 7
+
+
+
+[params]
+logo = "images/logo.png"
+home = "Home"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# Google Analitycs
+googleAnalitycsID = "Your ID"
+
+  # Preloader
+  [params.preloader]
+  enable = true
+
+  # Navigation button
+  [params.navBtn]
+  enable = true
+  btnText = "Try Free"
+  URL = "#"
+
+  # Banner
+  [params.banner]
+  title = "Take Control of your <br> Project and Team"
+  content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum <br> dolore eu fugiat nulla pariatur."
+  bgImage = "images/hero-area/banner-bg.svg"
+  image = "images/hero-area/banner-img.png"
+  btnText = "explore us"
+  URL = "#"
+    [params.banner.bgShape]
+    enable = true
+
+
+  # footer
+  [params.footer]
+  bgImage = "images/backgrounds/footer-bg.svg"
+  
+    [[params.footer.socialIcon]]
+    icon = "ti-facebook"
+    color = "facebook"
+    URL = "#"
+
+    [[params.footer.socialIcon]]
+    icon = "ti-twitter-alt"
+    color = "twitter"
+    URL = "#"
+
+    [[params.footer.socialIcon]]
+    icon = "ti-linkedin"
+    color = "linkedin"
+    URL = "#"
+
+    [[params.footer.socialIcon]]
+    icon = "ti-github"
+    color = "black"
+    URL = "#"

@@ -1,0 +1,39 @@
+---
+label: Blog Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: watermark
+  label: watermark
+  default: Blog
+  description: Page header watermark
+- type: file
+  name: bg_image
+  label: bg_image
+- type: textarea
+  name: description
+  label: description
+  description: meta description
+- type: file
+  name: image
+  label: image
+  description: Post thumbnail
+- type: text
+  name: author
+  label: author
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: tags
+  label: tags
+- type: text
+  name: type
+  label: type
+  default: post

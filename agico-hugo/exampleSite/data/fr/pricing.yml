@@ -1,0 +1,38 @@
+########################### Pricing #################################
+pricing:
+  enable : true
+  subtitle : "Pricing table"
+  title : "choose your plan"
+  pricing_table:
+    # pricing table loop
+    - title : "Basic"
+      price : "$49"
+      unit : "month"
+      description : "Best for small individuals"
+      link : "#"
+      services:
+        - "Express Service"
+        - "Customs Clearance"
+        - "Time-Critical Services"
+        
+    # pricing table loop
+    - title : "Professional"
+      price : "$79"
+      unit : "month"
+      description : "Best for small individuals"
+      link : "#"
+      services:
+        - "Express Service"
+        - "Customs Clearance"
+        - "Time-Critical Services"
+        
+    # pricing table loop
+    - title : "Business"
+      price : "$99"
+      unit : "month"
+      description : "Best for small individuals"
+      link : "#"
+      services:
+        - "Express Service"
+        - "Customs Clearance"
+        - "Time-Critical Services"
